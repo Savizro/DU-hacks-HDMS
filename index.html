@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HDIMS - Health Data Monitoring</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="index.js"></script>
+</head>
+<body>
+    <header>
+        <h1 class="fade-in">Health & Department Management System</h1>
+        <button id="toggleTheme">🌙</button>
+    </header>
+    
+    <main>
+        <section id="loginSection" class="fade-in">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="email" id="email" placeholder="Enter Email" required>
+                <input type="password" id="password" placeholder="Enter Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+
+        <section id="dashboard" class="dashboard slide-up" style="display: none;">
+            <h2>Welcome to HDIMS</h2>
+            <p>Monitor and manage health data in real-time.</p>
+            
+            <form id="dataEntryForm">
+                <h3>Enter Hospital Data</h3>
+                <input type="date" id="dateInput" required>
+                <input type="number" id="patientCount" placeholder="Patient Count" required>
+                <input type="number" id="bedOccupancy" placeholder="Bed Occupancy (%)" required>
+                <button type="submit">Submit Data</button>
+            </form>
+            
+            <h3>Data Overview</h3>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Patient Count</th>
+                        <th>Bed Occupancy (%)</th>
+                    </tr>
+                </thead>
+                <tbody id="dataTableBody"></tbody>
+            </table>
+            
+            <canvas id="dataChart"></canvas>
+        </section>
+    </main>
+</body>
+</html>
