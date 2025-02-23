@@ -7,3 +7,5 @@ The data is intensively stored and can be seen, once the Hospital/Departmental S
 Last but not the least, we used HTML,CSS and Javascript for this project
 
 Hope this project is insightful to the people out there :)
+
+You may access our website from the "about" section
